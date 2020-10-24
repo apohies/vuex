@@ -40,6 +40,7 @@ class UsuariosController extends Controller
     public function edit($id,Request $request){
 
         $usuario=Usuario::where('id',$id)->first();
+        $usuario->nombre=$request->nombre;
         $usuario->imagen=$request->imagen;
         $usuario->cedula=$request->cedula;
         $usuario->correo=$request->correo;
